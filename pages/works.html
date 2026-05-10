@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works｜制作・実験｜流派</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-md);
+      margin-top: var(--space-lg);
+    }
+    .work-card {
+      border: 1px solid var(--color-border);
+      padding: var(--space-lg);
+      transition: border-color 0.4s ease;
+    }
+    .work-card:hover { border-color: var(--color-beni); }
+    .work-card-status {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--color-ink-faint);
+      margin-bottom: var(--space-sm);
+    }
+    .work-card-status.in-progress { color: var(--color-beni); }
+    .work-card-title {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: var(--space-sm);
+      line-height: 1.6;
+    }
+    .work-card-desc {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--color-ink-light);
+      line-height: 2;
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">流派<span class="beni-dot"></span></a>
+      <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="manifesto.html">Manifesto</a></li>
+        <li><a href="temae-ha.html">手前派</a></li>
+        <li><a href="taso-ha.html">多想派</a></li>
+        <li><a href="toge-ha.html">棘派</a></li>
+        <li><a href="benibana.html">紅花</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="works.html" class="active">Works</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header">
+    <p class="section-label">Production & Experiment</p>
+    <h1 class="section-title">制作・実験</h1>
+    <p class="hero-subcopy" style="margin-top: var(--space-sm);">Works ── 思考を形にする試み、形になる手前の実験</p>
+  </header>
+
+  <div class="page-content">
+    <p class="fade-in">
+      ここには、流派の思想から生まれた制作物・実験・プロトタイプが蓄積される。
+      完成作品だけでなく、実験の過程や失敗も含めて記録する。
+    </p>
+
+    <div class="works-grid fade-in">
+
+      <article class="work-card">
+        <p class="work-card-status in-progress">In Progress</p>
+        <h3 class="work-card-title">流派サイト──制作ノートとしてのWeb</h3>
+        <p class="work-card-desc">
+          このサイト自体が最初の制作物である。
+          静的HTML/CSS/JSによるプロトタイプ。
+          GitHub時代の制作ノートとして、思考と制作の過程を記録する。
+        </p>
+        <span class="note-card-tag" style="margin-top: var(--space-sm); display: inline-block;">Web</span>
+        <span class="note-card-tag" style="margin-top: var(--space-sm); display: inline-block;">プロトタイプ</span>
+      </article>
+
+      <article class="work-card">
+        <p class="work-card-status">Planned</p>
+        <h3 class="work-card-title">紅花フィールドノート</h3>
+        <p class="work-card-desc">
+          紅花の栽培・収穫・染色の過程を、写真・テキスト・スケッチで記録する
+          フィールドワーク。身体性の記録としての制作ノート。
+        </p>
+        <span class="note-card-tag" style="margin-top: var(--space-sm); display: inline-block;">フィールドワーク</span>
+        <span class="note-card-tag" style="margin-top: var(--space-sm); display: inline-block;">紅花</span>
+      </article>
+
+      <article class="work-card">
+        <p class="work-card-status">Planned</p>
+        <h3 class="work-card-title">紅花NFTカード──共同体への入口</h3>
+        <p class="work-card-desc">
+          紅花の多層の意味をカードとして視覚化する実験。
+          NFTという形式を、投機ではなく共同体への参加証として再定義する。
+        </p>
+        <span class="note-card-tag" style="margin-top: var(--space-sm); display: inline-block;">実験</span>
+        <span class="note-card-tag" style="margin-top: var(--space-sm); display: inline-block;">NFT</span>
+      </article>
+
+    </div>
+
+    <div class="status-marker fade-in" style="margin-top: var(--space-xl);">制作は始まったばかりである</div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-left">流派<span style="color: var(--color-beni);">。</span></div>
+    <div class="footer-right">2026 ──</div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
