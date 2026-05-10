@@ -369,6 +369,131 @@ a:hover {
   padding-bottom: 2px;
 }
 
+/* ─── Shindo (Root Philosophy) ─── */
+
+.shindo-section {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-xl) 0;
+  margin: var(--space-xl) 0;
+  position: relative;
+}
+
+.shindo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-beni),
+    rgba(196, 30, 58, 0.05),
+    rgba(196, 30, 58, 0.05),
+    var(--color-beni)
+  );
+  opacity: 0.2;
+}
+
+.shindo-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+  position: relative;
+  z-index: 1;
+}
+
+.shindo-title {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-align: center;
+  margin-bottom: var(--space-xs);
+}
+
+.shindo-title .beni {
+  color: var(--color-beni);
+}
+
+.shindo-subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-md);
+}
+
+.shindo-copy {
+  text-align: center;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 2.2;
+  margin-bottom: var(--space-xl);
+  color: var(--color-ink);
+}
+
+.shindo-copy strong {
+  color: var(--color-beni);
+  font-weight: 500;
+}
+
+.shindo-body {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.shindo-body p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 2.4;
+  color: var(--color-ink-light);
+  margin-bottom: var(--space-lg);
+}
+
+.shindo-body p strong {
+  font-weight: 500;
+  color: var(--color-ink);
+}
+
+.shindo-relation {
+  max-width: 640px;
+  margin: var(--space-xl) auto 0;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.shindo-relation-label {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-ink-faint);
+  margin-bottom: var(--space-md);
+}
+
+.shindo-relation-item {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: var(--space-md);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  color: var(--color-ink-light);
+  font-weight: 300;
+}
+
+.shindo-relation-item span:first-child {
+  font-weight: 500;
+  color: var(--color-ink);
+  letter-spacing: 0.05em;
+}
+
 /* ─── Benibana Section ─── */
 
 .benibana-section {
